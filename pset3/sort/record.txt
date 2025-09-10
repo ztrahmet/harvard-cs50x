@@ -1,0 +1,14 @@
+./sort1: Bubble Sort
+random50000.txt   6.948s
+sorted50000.txt   0.703s
+reversed50000.txt 5.203s
+
+./sort2: Merge Sort
+random50000.txt   0.556s
+sorted50000.txt   1.324s
+reversed50000.txt 0.619s
+
+./sort3: Selection Sort
+random50000.txt   3.262s
+sorted50000.txt   2.872s
+reversed50000.txt 3.090s

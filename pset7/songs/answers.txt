@@ -1,0 +1,9 @@
++-------------+--------------+-------------------+
+| AVG(energy) | AVG(valence) | AVG(danceability) |
++-------------+--------------+-------------------+
+| 0.65906     | 0.484443     | 0.71646           |
++-------------+--------------+-------------------+
+
+The listener’s top 100 songs have an average energy of 0.66, valence of 0.48, danceability of 0.72. They like danceable, energetic songs with a mix of moods.
+
+Averaging all songs equally may not fully capture their taste. Play count and other parameters could give a better picture.

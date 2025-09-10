@@ -1,0 +1,94 @@
+:root {
+    --sidebar-width: 300px;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* Sidebar */
+.sidebar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: var(--sidebar-width);
+    height: 100%;
+    padding: 20px;
+    background-color: #222222;
+    color: #ffffff;
+    border-right: 1px solid #444444;
+}
+
+/* Profile container (avatar + text) */
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-container .profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-container .profile-text {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container .profile-text .profile-full-name {
+
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0px;
+}
+
+.profile-container .profile-text .profile-username {
+    color: #cccccc;
+    margin: 0px;
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #444444;
+}
+
+.sidebar .copyright {
+    font-size: small;
+    color: #cccccc;
+}
+
+/* Sidebar links/tabs */
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-links .current {
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.sidebar-links .current:hover {
+    background-color: #ffffff;
+    color: #666666;
+}
+
+/* Main content */
+.content {
+    margin: 40px 20px 20px calc(var(--sidebar-width) + 20px);
+    padding: 20px;
+}

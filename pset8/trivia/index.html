@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Part 1: Multiple Choices
+                document.querySelectorAll('button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Reset all buttons first
+                        document.querySelectorAll('button').forEach(button => button.removeAttribute('style'))
+
+                        if (button.textContent.trim() === '1 person per 6 sheep') {
+                            document.querySelector('#choice').innerHTML = 'Correct!';
+                            button.style.backgroundColor = 'green';
+                        }
+                        else {
+                            document.querySelector('#choice').innerHTML = 'Incorrect';
+                            button.style.backgroundColor = 'red';
+                        }
+                    });
+                });
+
+                // Part 2: Free Response
+                document.querySelector('#check').addEventListener('click', function() {
+                    // Reset first
+                    document.querySelector('#answer').removeAttribute('style');
+
+                    let answer = document.querySelector('#answer').value.trim().toLowerCase();
+
+                    if (answer === 'switzerland') {
+                        document.querySelector('#response').innerHTML = 'Correct!';
+                        document.querySelector('#answer').style.backgroundColor = 'green';
+                    }
+                    else {
+                        document.querySelector('#response').innerHTML = 'Incorrect';
+                        document.querySelector('#answer').style.backgroundColor = 'red';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <button>6 people per 1 sheep</button>
+                <button>3 people per 1 sheep</button>
+                <button>1 person per 1 sheep</button>
+                <button>1 person per 3 sheep</button>
+                <button>1 person per 6 sheep</button>
+                <p id="choice"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea might get lonely?</h3>
+                <input type="text" id="answer">
+                <input type="submit" id="check" value="Check Answer">
+                <p id="response"></p>
+            </div>
+        </div>
+    </body>
+</html>

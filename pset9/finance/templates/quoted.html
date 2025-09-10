@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block title %}Quote Result{% endblock %}
+{% block main %}
+<h2>Quote</h2>
+<p><strong>{{ name }} ({{ symbol }})</strong></p>
+<p>Current price: <strong>{{ price | usd }}</strong></p>
+<a class="btn btn-secondary" href="/">Back</a>
+{% endblock %}
